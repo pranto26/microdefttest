@@ -1,6 +1,8 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\MyController;
+
 
 /*
 |--------------------------------------------------------------------------
@@ -16,3 +18,7 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+Route::get('/add',[MyController::class,'add']);
+Route::post('/add',[MyController::class,'addsubmit']);
+Route::post('/delete{id}',[MyController::class,'addsubmit']);
+
