@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\MyController;
+use App\Http\Controllers\LoginController;
 
 
 /*
@@ -21,4 +22,6 @@ Route::get('/', function () {
 Route::get('/add',[MyController::class,'add']);
 Route::post('/add',[MyController::class,'addsubmit']);
 Route::post('/delete{id}',[MyController::class,'addsubmit']);
+Route::get('/login',[LoginController::class,'login']);
+Route::post('/login',[LoginController::class,'loginSubmit']);
 
