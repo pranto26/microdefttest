@@ -18,6 +18,8 @@ class CreateStudentsTable extends Migration
             $table->string('name');
             $table->string('class');
             $table->datetime('date_of_birth');
+            $table->bigInteger('department_id')->unsigned()->index()->nullable();
+            $table->foreign('department_id')->references('id')->on('departments')->onDelete('cascade');
            
 
 
